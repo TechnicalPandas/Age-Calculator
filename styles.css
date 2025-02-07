@@ -1,59 +1,174 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  flex-direction: column;
+  transition: background 0.3s ease-in-out;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+label {
+  font-size: 20px;
+}
+
+input[type="date"] {
+  padding: 12px;
+  font-size: 18px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  transition: border 0.3s ease-in-out;
+}
+
+input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Smooth result display */
+#result {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#result.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #222;
+  color: #fff ;
+}
+
+.dark-mode .container {
+  background-color: #333;
+  color: #fff ;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.dark-mode #result {
+  color: #fff !important; /* Ensure text is visible in dark mode */
+}
+
+
+.dark-mode button {
+  background-color: #444;
+}
+
+.dark-mode button:hover {
+  background-color: #666;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
   .container {
-    background-color: #fff;
-    padding: 40px; /* Increased padding */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 400px; /* Set a fixed width */
-    max-width: 90%; /* Ensure it doesn't overflow on small screens */
+      padding: 30px;
+      margin-top: 50px;
   }
   
   h1 {
-    margin-bottom: 20px;
-    font-size: 28px; /* Larger font size for the heading */
+      font-size: 24px;
   }
-  
-  label {
-    font-size: 20px; /* Larger font size for the label */
+
+  label, input[type="date"], button {
+      font-size: 16px;
   }
-  
-  input[type="date"] {
-    padding: 12px; /* Slightly larger padding */
-    font-size: 18px; /* Larger font size */
-    margin: 20px 0; /* Increased margin */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%; /* Make the input take full width */
-  }
-  
-  button {
-    padding: 12px 24px; /* Larger padding */
-    font-size: 18px; /* Larger font size */
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%; /* Make the button take full width */
-    margin-top: 10px; /* Add some spacing */
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+
   #result {
-    margin-top: 30px; /* Increased margin */
-    font-size: 24px; /* Larger font size */
-    font-weight: bold;
+      font-size: 20px;
   }
+}
+
+/* Share Section */
+#shareSection {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#shareSection p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#shareSection button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease;
+}
+
+#shareSection button:nth-child(1) {
+  background-color: #25D366;
+  color: white;
+}
+
+#shareSection button:nth-child(2) {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+#shareSection button:nth-child(3) {
+  background-color: #1877F2;
+  color: white;
+}
+
+#shareSection button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
