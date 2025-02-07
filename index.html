@@ -6,25 +6,26 @@
   <title>Age Calculator - Calculate Your Age Instantly</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Use this free online Age Calculator to instantly determine your exact age in years, months, and days.">
+  <meta name="description" content="Use this free online Age Calculator to calculate your exact age in years, months, and days. Find out how old you are instantly!">
   <meta name="keywords" content="Age Calculator, Calculate Age, Online Age Calculation, How Old Am I, Date of Birth Calculator">
   <meta name="author" content="TechnicalPandas">
   <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph Meta Tags for Social Media -->
+  <link rel="canonical" href="https://yourwebsite.com/age-calculator">
+
+  <!-- Open Graph Meta Tags (for better social sharing) -->
   <meta property="og:title" content="Age Calculator - Calculate Your Age Instantly">
-  <meta property="og:description" content="Use this free online Age Calculator to determine your exact age in years, months, and days.">
-  <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg">
+  <meta property="og:description" content="Easily calculate your age in years, months, and days using this free online age calculator.">
+  <meta property="og:image" content="https://yourwebsite.com/images/age-calculator.png">
   <meta property="og:url" content="https://yourwebsite.com/age-calculator">
   <meta property="og:type" content="website">
-
+  
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Age Calculator - Calculate Your Age Instantly">
-  <meta name="twitter:description" content="Use this free online Age Calculator to determine your exact age in years, months, and days.">
-  <meta name="twitter:image" content="https://yourwebsite.com/preview-image.jpg">
-
-  <!-- Structured Data for SEO (JSON-LD) -->
+  <meta name="twitter:title" content="Age Calculator - Find Out Your Age Instantly">
+  <meta name="twitter:description" content="Use this online tool to calculate your exact age in years, months, and days.">
+  <meta name="twitter:image" content="https://yourwebsite.com/images/age-calculator.png">
+  
+  <!-- Structured Data for Rich Results -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,17 +34,25 @@
     "description": "Use this free online Age Calculator to determine your exact age in years, months, and days.",
     "url": "https://yourwebsite.com/age-calculator",
     "author": {
-      "@type": "Person",
+      "@type": "Organization",
       "name": "TechnicalPandas"
     }
   }
   </script>
 
-  <!-- Preload critical CSS -->
+  <!-- Favicon & Apple Touch Icon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- Preload CSS for Performance -->
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Defer JavaScript for Faster Loading -->
+  <script defer src="script.js"></script>
 </head>
 <body>
+
   <div class="container">
     <h1>Online Age Calculator</h1>
     <label for="birthdate">Enter your birthdate:</label>
@@ -64,7 +73,5 @@
     <button id="darkModeBtn">Dark Mode</button>
   </div>
 
-  <!-- Defer JavaScript for better performance -->
-  <script defer src="script.js"></script>
 </body>
 </html>
